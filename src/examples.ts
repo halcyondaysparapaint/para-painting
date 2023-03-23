@@ -10,8 +10,7 @@ export const examples = [
     image: "test-2-1.jfif",
   },
   {
-    prompt: `They were on the crest of a hill. The sun had set some time since, but the landscape was still clear in the mellow afterlight. To the west a dark church spire rose up against a marigold sky. Below was a little valley and beyond a long, gently-rising slope with snug farmsteads scattered along it. From one to another the child’s eyes darted, eager and wistful. At last they lingered on one away to the left, far back from the road, dimly white with blossoming trees in the twilight of the surrounding woods. Over it, in the stainless southwest sky, a great crystal-white star was shining like a lamp of guidance and promise.`,
-    negativePrompt: "none",
-    image: "test-2-2.jfif",
+    prompt: `They were on the crest of a hill. The sun had set some time since, but the landscape was still clear in the mellow afterlight. To the west a dark church spire rose up against a marigold sky. Below was a little valley and beyond a long, gently-rising slope with snug farmsteads scattered along it. At last they lingered on one away to the left, far back from the road, dimly white with blossoming trees in the twilight of the surrounding woods. Over it, in the stainless southwest sky, a great crystal-white star was shining like a lamp of guidance and promise.`,
+    image: "test-3.jfif",
   }
 ];
