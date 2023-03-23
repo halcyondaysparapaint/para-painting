@@ -1,14 +1,9 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import {
-  Space,
-  Typography,
-  Col,
-  Row,
-  Grid,
-} from "antd";
+import { Space, Col, Row, Grid } from "antd";
 import Playground from "./Playground";
 import Example from "./Example";
+import Landing from "./Landing";
 
 const { useBreakpoint } = Grid;
 
@@ -23,24 +18,28 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-    
 function App() {
   const { md } = useBreakpoint();
 
-  return md ? (
-    <Row style={{ margin: 24 }}>
-      <Col span={12} style={{ padding: 24 }}>
-        <Example />
-      </Col>
-      <Col span={12} style={{ padding: 24 }}>
-        <Playground db={db} />
-      </Col>
-    </Row>
-  ) : (
-    <Space direction="vertical" style={{ width: "100%" }}>
-      <Example />
-      <Playground db={db} />
-    </Space>
+  return (
+    <>
+      <Landing />
+      {md ? (
+        <Row style={{ margin: 24 }}>
+          <Col span={12} style={{ padding: 24 }}>
+            <Example />
+          </Col>
+          <Col span={12} style={{ padding: 24 }}>
+            <Playground db={db} />
+          </Col>
+        </Row>
+      ) : (
+        <Space direction="vertical" style={{ width: "100%" }}>
+          <Example />
+          <Playground db={db} />
+        </Space>
+      )}
+    </>
   );
 }
 
