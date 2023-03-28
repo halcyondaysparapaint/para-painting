@@ -87,7 +87,7 @@ function Playground({db}: PlaygroundProps) {
   return (
     <Space direction="vertical" style={{ width: "100%" }} size="middle">
       <Title level={3}>Playground</Title>
-      Just enter your prompt and click the generate button.
+      Simply write about a memory (real or fictional) and click the generate button. Requirement: 300 - 1000 characters.
       <PlaygroundForm db={db}/>
     </Space>
   );
